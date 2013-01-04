@@ -1,3 +1,14 @@
 textarea {
     width: 100%;
 }
+body {
+    background-color: WhiteSmoke;
+}
+
+.url {
+    width: 325px;
+}
+
+.page-header {
+    padding-bottom: 10px;
+}
