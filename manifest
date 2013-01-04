@@ -1,0 +1,20 @@
+#appname:Clipster Desktop
+#appid:com.github.kwbock.clipster
+#publisher:Daniel White
+#image:default_app_logo.png
+#url:https://github.com/kwbock/clipster
+#guid:6df7e653-a92d-400a-a872-1cdb03aeed96
+#desc:No description provided
+#type:desktop
+runtime:1.3.1-beta
+app:1.3.1-beta
+codec:1.3.1-beta
+database:1.3.1-beta
+filesystem:1.3.1-beta
+media:1.3.1-beta
+monkey:1.3.1-beta
+network:1.3.1-beta
+platform:1.3.1-beta
+process:1.3.1-beta
+ui:1.3.1-beta
+worker:1.3.1-beta
