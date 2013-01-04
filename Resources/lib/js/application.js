@@ -1,7 +1,7 @@
-// create and set menu
-var menu = Ti.UI.createMenu(),
-setting_btn = Ti.UI.createMenuItem('Settings', function() {
+$("#clear").click(function() {
+  window.location = "app://index.html";
+});
+
+$("#settings").click(function() {
   window.location = "app://settings.html"
 });
-menu.appendItem(setting_btn);
-Ti.UI.setMenu(menu);

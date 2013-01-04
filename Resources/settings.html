@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <head>
   <title>Settings</title>
-  <link href="lib/stylesheets/screen.css" media="all" rel="stylesheet" type="text/css" />
-  <link href="lib/stylesheets/ie.css" media="all" rel="stylesheet" type="text/css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="lib/css/application.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="lib/css/modern-responsive.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="lib/css/modern.css" media="all" rel="stylesheet" type="text/css" />
 </head>
 <body>
-  <div class="span-20">
+  <div class="span-17 filler">
     <!-- Host URL -->
-    <div class="span-19">
+    <div class="span-16 clear">
       <label for="host_url">Host URL</label>
-      <input id="host_url" class="span-14" type="text" type="url" name="host_url" required="required" placeholder="http://www.developerdan.com/clipster/"/>
+      <input class="url" id="host_url" type="text" type="url" name="host_url" required="required" placeholder="http://www.developerdan.com/clipster/"/>
     </div>
     <!-- /Host URL -->
     
     <!-- Language -->
-    <div class="row">
+    <div class="span-8 clear">
       <label for="language">Default Language</label>
       <select id="language" name="language">
         <option value="cpp">C++</option>
@@ -41,7 +43,7 @@
     <!-- /Language -->
     
     <!-- Lifespan -->
-    <div class="row">
+    <div class="span-8">
       <label for="lifespan">Default Lifespan</label>
       <select id="lifespan" name="lifespan">
         <option value="">Forever</option>
@@ -55,22 +57,24 @@
     <!-- /Lifespan -->
     
     <!-- Title -->
-    <div class="row">
+    <div class="span-8 clear">
       <label for="title">Default Title</label>
       <input id="title" type="text" name="title" placeholder="Untitled"/>
     </div>
     <!-- /Title -->
     
     <!-- private -->
-    <div class="row">
+    <div class="span-8">
       <label>Default Privacy</label>
       <input type="radio" name="private" value="public"/>Public
       <input type="radio" name="private" value="private"/>Private
     </div>
     <!-- /private -->
     
-    <button id="save" type="button">Save</button>
-    <button id="cancel" type="button">Cancel</button>
+    <div class="span-16 clear">
+      <button id="save" type="button">Save</button>
+      <button id="cancel" type="button">Cancel</button>
+    </div>
   </div>
   
   <script type="text/javascript" src="lib/js/jquery-1.8.3.min.js"></script>
