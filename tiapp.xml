@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ti:app xmlns:ti='http://ti.appcelerator.org'>
 <!-- These values are edited/maintained by TideSDK Developer -->
-<id>com.github.kwbock.clipster</id>
+<id>com.github.lightswitch05.clipster_desktop</id>
 <name>Clipster Desktop</name>
 <version>0.1.0</version>
 <publisher>Daniel White</publisher>
-<url>https://github.com/kwbock/clipster</url>
+<url>http://github.com/lightswitch05/clipster_desktop</url>
 <icon>default_app_logo.png</icon>
 <copyright>2013 by Daniel White</copyright>
 <!-- Window Definition - these values can be edited -->
