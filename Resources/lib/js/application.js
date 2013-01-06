@@ -32,3 +32,27 @@ function displayMessage(message, type) {
         $(".info-bar").css("display","block");
     }
 }
+
+function getProperties() {
+    var file = Ti.Filesystem.getFile(Ti.Filesystem.getApplicationDataDirectory(), "user.properties");
+    var userProperties;
+    
+    //if file exists, then load properties.
+    if(file.exists()) {
+        userProperties = Ti.App.loadProperties(file.toString());
+    } else {
+        //create new set of properties if file doesn't exist
+        userProperties = Ti.App.createProperties({
+            hostURL : "http://www.developerdan.com/clipster",
+            language : "text",
+            lifespan : "",
+            title : "Untitled",
+            privacy : false    
+        });
+        userProperties.saveTo(file.toString());
+    }
+
+    //null out file object as pointer not used anymore
+    file = null;
+    return userProperties;
+}

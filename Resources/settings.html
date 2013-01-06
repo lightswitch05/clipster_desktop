@@ -29,74 +29,76 @@
           <button id="close-info-message" class="place-right">Close</button>
         </div>
         
-        <div class="span">
-          <!-- Host URL -->
-          <label for="host_url">Host URL</label>
-          <input class="url" id="host_url" type="text" type="url" name="host_url" required="required" placeholder="http://www.developerdan.com/clipster/"/>
-          <!-- /Host URL -->
+        <form name="settings">
+          <div class="span">
+            <!-- Host URL -->
+            <label for="host_url">Host URL</label>
+            <input class="url" id="host_url" type="text" type="url" name="host_url" required="required" placeholder="http://www.developerdan.com/clipster/"/>
+            <!-- /Host URL -->
+          </div>
+          
+          <div class="span">
+            <!-- Language -->
+            <label for="language">Default Language</label>
+            <select id="language" name="language">
+              <option value="cpp">C++</option>
+              <option value="css">CSS</option>
+              <option value="clojure">Clojure</option>
+              <option value="delphi">Delphi</option>
+              <option value="groovy">Groovy</option>
+              <option value="haml">HAML Template</option>
+              <option value="html">HTML</option>
+              <option value="erb">HTML ERB Template</option>
+              <option value="json">JSON</option>
+              <option value="java">Java</option>
+              <option value="java_script">JavaScript</option>
+              <option value="php">PHP</option>
+              <option value="text" selected="selected">Plain text</option>
+              <option value="python">Python</option>
+              <option value="ruby">Ruby</option>
+              <option value="sql">SQL</option>
+              <option value="xml">XML</option>
+              <option value="yaml">YAML</option>
+              <option value="diff">diff output</option>
+            </select>
+            <!-- /Language -->
+          </div>
+          
+          <div class="span">
+            <!-- Lifespan -->
+            <label for="lifespan">Default Lifespan</label>
+            <select id="lifespan" name="lifespan">
+              <option value="">Forever</option>
+              <option value="An Hour">An Hour</option>
+              <option value="A Day">A Day</option>
+              <option value="A Week">A Week</option>
+              <option value="A Month">A Month</option>
+              <option value="A Year">A Year</option>
+            </select>
+            <!-- /Lifespan -->
+          </div>
+          
+          <div class="span">
+            <!-- Title -->
+            <label for="title">Default Title</label>
+            <input id="title" type="text" name="title" placeholder="Untitled"/>
+            <!-- /Title -->
+          </div>
+          
+          <div class="span">
+            <!-- private -->
+            <label>Default Privacy</label>
+            <input id="privacy-public" type="radio" name="private" value="public"/>Public
+            <input id="privacy-private" type="radio" name="private" value="private"/>Private
+            <!-- /private -->
+          </div>
+          
+          <div class="row button-set data-role='button-set'">
+            <button id="home" type="button">Back</button>
+            <button id="save" class="active" type="button">Save</button>
+          </div>
         </div>
-        
-        <div class="span">
-          <!-- Language -->
-          <label for="language">Default Language</label>
-          <select id="language" name="language">
-            <option value="cpp">C++</option>
-            <option value="css">CSS</option>
-            <option value="clojure">Clojure</option>
-            <option value="delphi">Delphi</option>
-            <option value="groovy">Groovy</option>
-            <option value="haml">HAML Template</option>
-            <option value="html">HTML</option>
-            <option value="erb">HTML ERB Template</option>
-            <option value="json">JSON</option>
-            <option value="java">Java</option>
-            <option value="java_script">JavaScript</option>
-            <option value="php">PHP</option>
-            <option value="text" selected="selected">Plain text</option>
-            <option value="python">Python</option>
-            <option value="ruby">Ruby</option>
-            <option value="sql">SQL</option>
-            <option value="xml">XML</option>
-            <option value="yaml">YAML</option>
-            <option value="diff">diff output</option>
-          </select>
-          <!-- /Language -->
-        </div>
-        
-        <div class="span">
-          <!-- Lifespan -->
-          <label for="lifespan">Default Lifespan</label>
-          <select id="lifespan" name="lifespan">
-            <option value="">Forever</option>
-            <option value="An Hour">An Hour</option>
-            <option value="A Day">A Day</option>
-            <option value="A Week">A Week</option>
-            <option value="A Month">A Month</option>
-            <option value="A Year">A Year</option>
-          </select>
-          <!-- /Lifespan -->
-        </div>
-        
-        <div class="span">
-          <!-- Title -->
-          <label for="title">Default Title</label>
-          <input id="title" type="text" name="title" placeholder="Untitled"/>
-          <!-- /Title -->
-        </div>
-        
-        <div class="span">
-          <!-- private -->
-          <label>Default Privacy</label>
-          <input type="radio" name="private" value="public"/>Public
-          <input type="radio" name="private" value="private"/>Private
-          <!-- /private -->
-        </div>
-        
-        <div class="row button-set data-role='button-set'">
-          <button id="home" type="button">Back</button>
-          <button id="save" class="active" type="button">Save</button>
-        </div>
-      </div>
+      </form>
     </div>
   </div>
   <script type="text/javascript" src="lib/js/jquery-1.8.3.min.js"></script>
