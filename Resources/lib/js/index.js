@@ -2,25 +2,53 @@ $("#create").click(function() {
     submitClip();
 });
 
+function endsWith(str, suffix) {
+    return str.indexOf(suffix, str.length - suffix.length) !== -1;
+}
+
 function submitClip() {
-    var clip = {}
+    var clip = {};
     clip["clip"] = $('form[name="clip"]').serializeObject();
-    var url = userProperties.getString("hostURL") + "/create.json";
-    url = url.replace("//", "/"); 
+    
+    var url = getServerUrl();
+    if(!endsWith(url, "/")){
+        url += "/";
+    }
+    url += "create.json";
+    
     $.post(url, clip)
-    .error(function(jqXHR, textStatus, errorThrown) {
+    .fail(function(jqXHR, textStatus, errorThrown) {
         if(jqXHR.status == 404) {
             displayMessage("Got HTTP 404 error. Please make sure your Host URL is accurate.", "error");
         }
         else if( jqXHR.status == 422) {
-            displayMessage("Validation failed: " + jqXHR.responseText, "error");
+            var errors = jQuery.parseJSON(jqXHR.responseText);
+            var message = "<ul>";
+            $.each( errors, function( key, value ) {
+                message += "<li>" + key + " - " + value[0] + "</li>";
+            });
+            message += "</ul>";
+            displayMessage(message, "error");
         }
         else {
             displayMessage("Something went wrong. HTTP Status:" + jqXHR.status + ". Message:" + jqXHR.responseText, "error");
-            alert(JSON.stringify(jqXHR));
         }
     })
-    .complete(function() { });
+    .done(function(data, textStatus, jqXHR){
+        var url = getServerUrl() + "/" + data.id;
+        var display = "<p>Clip <a data-outer-link='" + url +"'>" + data.id + "</a> created! ";
+        display += "<i class='icon-copy' data-copy='" + url + "' title='Copy link to Clipboard'></i></p>"
+        displayMessage(display, "info");
+    });
+}
+
+function getServerUrl(){
+    var url = userProperties.getString("hostURL");
+    if(url == ""){
+        // Use default url if one is not supplied
+        url = "http://www.developerdan.com/clipster" + url;
+    }
+    return url;
 }
 
 // fill out the values

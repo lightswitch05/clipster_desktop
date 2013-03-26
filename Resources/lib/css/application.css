@@ -13,7 +13,12 @@ body {
     padding-bottom: 10px;
 }
 
-.error-bar, .warning-bar, .info-bar {
-    position: relative;
-    display: none;
+.metrouicss .bg-color-green a,
+.metrouicss .bg-color-green a:hover,
+.metrouicss .bg-color-green a:visited,
+.metrouicss .bg-color-green a:link,
+.metrouicss .bg-color-green a:active,
+.metrouicss .bg-color-green a:focus {
+  color:black;
+  cursor:pointer;
 }

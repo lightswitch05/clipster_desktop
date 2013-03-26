@@ -1,3 +1,5 @@
+$(".notices").hide();
+
 $("#home").click(function() {
     window.location = "app://index.html";
 });
@@ -6,30 +8,30 @@ $("#settings").click(function() {
     window.location = "app://settings.html";
 });
 
-$("#close-error-message").click(function() {
-    $(".error-bar").css("display","none");
+$("#full-content").on("click","a[data-outer-link]", function(){
+    Ti.Platform.openURL($(this).data("outer-link"));
 });
 
-$("#close-warning-message").click(function() {
-    $(".warning-bar").css("display","none");
+$(".close").click(function(){
+    $(this).closest(".notices").hide();
 });
 
-$("#close-info-message").click(function() {
-    $(".info-bar").css("display","none");
+$("#full-content").on("click",".icon-copy", function(){
+    Ti.UI.Clipboard.setText($(this).data("copy"));
 });
 
 function displayMessage(message, type) {
     if(type == "error"){
         $('#error-message-content').html("<p>" + message + "</p>");
-        $(".error-bar").css("display","block");
+        $("#error-message").show();
     }
     else if(type == "warning"){
         $('#warning-message-content').html("<p>" + message + "</p>");
-        $(".warning-bar").css("display","block");
+        $("#warning-message").show();
     }
     else if(type == "info"){
         $('#info-message-content').html("<p>" + message + "</p>");
-        $(".info-bar").css("display","block");
+        $("#info-message").show();
     }
 }
 

@@ -6,8 +6,8 @@
   <link href="lib/css/modern.css" media="all" rel="stylesheet" type="text/css" />
   <link href="lib/css/application.css" media="all" rel="stylesheet" type="text/css" />
 </head>
-<body>
-  <div class="page">
+<body class="metrouicss">
+  <div id="full-content" class="page">
     <div class="page-header bg-color-blue">
       <div class="page-header-content">
         <h1>Create Clip</h1>
@@ -16,17 +16,26 @@
     
     <div class="page-region">
       <div class="page-region-content">
-        <div id="error-message" class="span error-bar">
-          <div id="error-message-content"></div>
-          <button id="close-error-message" class="place-right">Close</button>
+        <div id="error-message" class="notices">
+          <div class="bg-color-red">
+            <a href="#" class="close"></a>
+            <div class="notice-header">Error</div>
+            <div id="error-message-content" class="notice-text"></div>
+          </div>
         </div>
-        <div id="warning-message" class="span warning-bar">
-          <div id="warning-message-content"></div>
-          <button id="close-warning-message" class="place-right">Close</button>
+        <div id="warning-message" class="notices">
+          <div class="bg-color-yellow">
+            <a href="#" class="close"></a>
+            <div class="notice-header">Warning</div>
+            <div id="warning-message-content" class="notice-text"></div>
+          </div>
         </div>
-        <div id="info-message" class="span info-bar">
-          <div id="info-message-content"></div>
-          <button id="close-info-message" class="place-right">Close</button>
+        <div id="info-message" class="notices">
+          <div class="bg-color-green">
+            <a href="#" class="close"></a>
+            <div class="notice-header">Success</div>
+            <div id="info-message-content" class="notice-text"></div>
+          </div>
         </div>
         
         <form name="clip">
@@ -104,7 +113,7 @@
     </div>
   </div>
   
-  <script type="text/javascript" src="lib/js/jquery-1.8.3.min.js"></script>
+  <script type="text/javascript" src="lib/js/jquery-1.9.1.min.js"></script>
   <script type="text/javascript" src="lib/js/application.js"></script>
   <script type="text/javascript" src="lib/js/index.js"></script> 
 </body>

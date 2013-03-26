@@ -1,4 +1,4 @@
 dist
 tmp
 *.wixpdb
-"packages/win32/bundle/Clipster Desktop/"
+packages/win32/bundle/Clipster Desktop/
